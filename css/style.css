@@ -5,24 +5,143 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    border: 1px solid greenyellow;
+    /* border: 1px solid greenyellow; */
 }
 
 :root {
     --bg-menu: #1f2425;
     --text-menu: #fff;
-    --text-main:#efefef;
+    --text-main: #efefef;
+    --bg-main: #24292e;
 }
 
-.window_nav_bar{
+.window_nav_bar {
     background: var(--bg-menu);
     height: 33px;
     padding: 0 0.55rem;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-menu);
-    font-size: 0.88rem;
+    font-size: 0.80rem;
     border-bottom: 1px solid #161819;
-    font-family: Source Sans Pro,sans-serif;
+    font-family: Source Sans Pro, sans-serif;
+}
+
+.vscode_logo_container {
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: 15px;
+    height: 15px;
+    background: none;
+    opacity: 1;
+    position: relative;
+    max-width: 100%;
+}
+
+.vscode_icon_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+
+}
+
+.window_menu {
+    flex: 1 1;
+    display: flex;
+    margin-right: auto;
+    margin-left: 0.5rem;
+}
+
+.window_menu>* {
+    padding: 0 0.5rem;
+    cursor: pointer;
+}
+
+.window_title {
+    flex: 1 1;
+    text-align: center;
+}
+
+.window_controls {
+    flex: 1 1;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.window_controls>* {
+    width: 15px;
+    height: 15px;
+    margin-left: 0.5rem;
+    padding: 0 0.2rem;
+    cursor: pointer;
+    filter: invert(99%) sepia(0%) saturate(5913%) hue-rotate(290deg) brightness(121%) contrast(87%);
+}
+
+/* main content */
+
+.side_bar {
+    background: var(--bg-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 4.5vw;
+    min-width: 50px;
+    max-width: 60px;
+    height: calc(100vh - 30px - 25px);
+}
+
+
+.sidebar_icon_container {
+    margin-top: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar_icon {
+    height: 48px;
+    width: 48px;
+    padding: 0.55rem 0;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+/* media */
+
+@media only screen and (max-width: 900px) {
+
+    .window_menu>* {
+        display: none;
+    }
+
+    .window_title {
+        flex: 4 1;
+    }
+
+    .sidebar_icon {
+        height: 40px;
+        width: 40px;
+        padding: 0.5rem 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+
 }

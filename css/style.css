@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: 1px solid greenyellow;
+}
+
+:root {
+    --bg-menu: #1f2425;
+    --text-menu: #fff;
+    --text-main:#efefef;
+}
+
+.window_nav_bar{
+    background: var(--bg-menu);
+    height: 33px;
+    padding: 0 0.55rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-menu);
+    font-size: 0.88rem;
+    border-bottom: 1px solid #161819;
+    font-family: Source Sans Pro,sans-serif;
+}

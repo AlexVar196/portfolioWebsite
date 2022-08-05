@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
     <title>AlexVarPortfolio</title>
 </head>
 
@@ -101,25 +102,25 @@
                 <p class="explorer_heading"> portfolio</p>
             </div>
             <div class="explorer_list">
-                <div class="explorer_list_item">
+                <div class="explorer_list_item active" data-tab-target="#home">
                     <span class="explorer_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/react_icon.svg">
                     </span>
                     <p>home.jsx</p>
                 </div>
-                <div class="explorer_list_item">
+                <div class="explorer_list_item" data-tab-target="#about">
                     <span class="explorer_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/html_icon.svg">
                     </span>
                     <p>about.html</p>
                 </div>
-                <div class="explorer_list_item">
+                <div class="explorer_list_item" data-tab-target="#projects">
                     <span class="explorer_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/js_icon.svg">
                     </span>
                     <p>projects.js</p>
                 </div>
-                <div class="explorer_list_item">
+                <div class="explorer_list_item" data-tab-target="#contact">
                     <span class="explorer_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/css3_icon.svg">
                     </span>
@@ -133,25 +134,25 @@
         <!-- MAIN CONTENT AREA -->
         <div class="main_content_container">
             <div class="tabs_bar">
-                <div class="tab_item">
+                <div class="tab_item active" data-tab-target="#home">
                     <span class="tabs_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/react_icon.svg">
                     </span>
                     <p>home.jsx</p>
                 </div>
-                <div class="tab_item">
+                <div class="tab_item" data-tab-target="#about">
                     <span class="tabs_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/html_icon.svg">
                     </span>
                     <p>about.html</p>
                 </div>
-                <div class="tab_item">
+                <div class="tab_item" data-tab-target="#projects">
                     <span class="tabs_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/js_icon.svg">
                     </span>
                     <p>projects.js</p>
                 </div>
-                <div class="tab_item">
+                <div class="tab_item" data-tab-target="#contact">
                     <span class="tabs_icon_container">
                         <img class="vscode_icon_img" alt="vscode icon" src="images/css3_icon.svg">
                     </span>
@@ -159,7 +160,12 @@
                 </div>
 
             </div>
-            <main class="layout_content"></main>
+            <main class="layout_content">
+                <div id="home" data-tab-content class="active"> Home </div>
+                <div id="about" data-tab-content> About </div>
+                <div id="projects" data-tab-content> projects </div>
+                <div id="contact" data-tab-content> contact </div>
+            </main>
         </div>
     </div>
 

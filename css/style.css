@@ -22,6 +22,8 @@
     --explorer-bg: #1f2428;
     --explorer-border: #161a1d;
     --tab-bg: #1f2428;
+    --tab-bg-hover: #24292e;
+    --tab-hover-border: #c9bc08;
 }
 
 .window_nav_bar {
@@ -185,6 +187,10 @@
     font-size: 1rem;
 }
 
+.explorer_list_item:hover {
+    background: var(--tab-bg-hover);
+}
+
 .explorer_list_item p {
     margin-left: 7px;
 }
@@ -220,6 +226,19 @@
     border-right: 1px solid var(--tab-border);
 }
 
+.tab_item:hover {
+    background: var(--tab-bg-hover);
+}
+
+.tab_item.active {
+    background: var(--tab-bg-hover);
+    border-top: 1px solid var(--tab-hover-border);
+}
+
+.explorer_list_item.active {
+    background: var(--tab-bg-hover);
+}
+
 .tab_item p {
     margin-left: 5px;
 }
@@ -231,6 +250,15 @@
     flex: 1 1;
     height: 85vh;
     overflow-y: auto;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+
+.active[data-tab-content] {
+    display: block;
 }
 
 

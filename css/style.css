@@ -275,11 +275,11 @@
 }
 
 .layout_content_container {
-    padding: 2rem;
+    padding: 0 2rem;
     color: var(--text-main);
     font-family: JetBrains Mono, monospace;
     flex: 1 1;
-    height: 96vh;
+    height: 93vh;
     overflow-y: auto;
 }
 
@@ -453,14 +453,20 @@
 }
 
 @media only screen and (max-width: 1600px) {
+    .technical_list_item {
+        margin-bottom: 1rem;
+    }
+
     .technical_list {
         flex-wrap: wrap;
-        padding: 1.5rem 3rem;
+        padding: 1.5rem 2.3rem;
     }
 
     .skills_block {
-        max-width: 450px;
-        min-width: 450px;
+        min-width: 400px;
+        max-width: 400px;
+        margin-right: 3rem;
+        margin-left: 3rem;
     }
 
     .gif_container {
@@ -483,9 +489,6 @@
         max-width: 400px;
     }
 
-    .technical_list_item {
-        margin-bottom: 1rem;
-    }
 
     .gif_container {
         display: none;
@@ -497,9 +500,6 @@
         padding-left: 1rem;
     }
 
-}
-
-@media only screen and (max-width: 1300px) {
     .about_wrapper {
         flex-direction: column;
         align-items: center;
@@ -509,7 +509,9 @@
         max-width: 750px;
         min-width: 650px;
     }
+
 }
+
 
 @media only screen and (max-width: 930px) {
 
@@ -538,12 +540,7 @@
         display: block;
         margin: 0 auto;
     }
-
-
-
-
 }
-
 
 @media only screen and (max-width: 740px) {
 

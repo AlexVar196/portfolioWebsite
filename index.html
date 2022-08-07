@@ -15,7 +15,7 @@
     <!-- Window Nav Bar -->
     <section class="window_nav_bar">
         <span class="vscode_logo_container">
-            <img class="vscode_icon_img" alt="vscode icon" src="images/vscode_icon.svg">
+            <img class="icon_image" alt="vscode icon" src="images/vscode_icon.svg">
         </span>
         <div class="window_menu">
             <p>File</p>
@@ -108,27 +108,29 @@
             <div class="explorer_list">
                 <div class="explorer_list_item active" data-tab-target="#home">
                     <span class="explorer_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/react_icon.svg">
+                        <img class="icon_image" alt="vscode icon" src="images/react_icon.svg">
                     </span>
                     <p>home.jsx</p>
                 </div>
                 <div class="explorer_list_item" data-tab-target="#about">
                     <span class="explorer_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/html_icon.svg">
+                        <img class="icon_image" alt="vscode icon" src="images/css3_icon.svg">
+
                     </span>
-                    <p>about.html</p>
+                    <p>about.css</p>
                 </div>
                 <div class="explorer_list_item" data-tab-target="#projects">
                     <span class="explorer_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/js_icon.svg">
+                        <img class="icon_image" alt="vscode icon" src="images/html_icon.svg">
+
                     </span>
-                    <p>projects.js</p>
+                    <p>projects.html</p>
                 </div>
                 <div class="explorer_list_item" data-tab-target="#contact">
                     <span class="explorer_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/css3_icon.svg">
+                        <img class="icon_image" alt="vscode icon" src="images/js_icon.svg">
                     </span>
-                    <p>contact.css</p>
+                    <p>contact.js</p>
                 </div>
 
             </div>
@@ -140,35 +142,67 @@
             <div class="tabs_bar">
                 <div class="tab_item active" data-tab-target="#home">
                     <span class="tabs_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/react_icon.svg">
+                        <img class="icon_image" alt="react icon" src="images/react_icon.svg">
                     </span>
                     <p>home.jsx</p>
                 </div>
                 <div class="tab_item" data-tab-target="#about">
                     <span class="tabs_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/html_icon.svg">
+                        <img class="icon_image" alt="css icon" src="images/css3_icon.svg">
                     </span>
-                    <p>about.html</p>
+                    <p>about.css</p>
                 </div>
                 <div class="tab_item" data-tab-target="#projects">
                     <span class="tabs_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/js_icon.svg">
+                        <img class="icon_image" alt="html icon" src="images/html_icon.svg">
                     </span>
-                    <p>projects.js</p>
+                    <p>projects.html</p>
                 </div>
                 <div class="tab_item" data-tab-target="#contact">
                     <span class="tabs_icon_container">
-                        <img class="vscode_icon_img" alt="vscode icon" src="images/css3_icon.svg">
+                        <img class="icon_image" alt="js icon" src="images/js_icon.svg">
                     </span>
-                    <p>contact.css</p>
+                    <p>contact.js</p>
                 </div>
 
             </div>
-            <main class="layout_content">
-                <div id="home" data-tab-content class="active"> Home </div>
-                <div id="about" data-tab-content> About </div>
-                <div id="projects" data-tab-content> projects </div>
-                <div id="contact" data-tab-content> contact </div>
+            <main class="layout_content_container">
+                <div id="home" data-tab-content class="layout_content active">
+                    <div class="layout_content_wrapper">
+                        <div class="home_title_container">
+                            <h1 class="homepage_name_title"><span>Alex</span>ander <span>Var</span>shavsky</h1>
+                            <h1 class="homepage_job_title">Front-End Developer</h1>
+                            <button class="home_button" data-tab-target="#projects">Projects</button>
+                            <button class="home_button" data-tab-target="#contact">Contact</button>
+                            <div class="home_about">
+                                <p> I’m <span class="highlight">Alex</span>, a 32-year-old <span class="highlight">web
+                                        and mobile</span> developer that gets excited by the
+                                    little things in software development and in life.
+                                    <br>I am passionate about utilizing the power of software to solve problems and make
+                                    people's lives better.
+                                    <br>I am a <span class="highlight">dedicated</span>, <span
+                                        class="highlight">responsible</span> and <span class="highlight">curious</span>
+                                    individual with a <span class="highlight">positive mindset</span> that
+                                    values simplicity and quality.
+                                    <br><br>When not digging into code, I love cooking, snuggling my dog and reading
+                                    about Blockchain Tech and Gaming.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="gif_container">
+                            <!-- <img style="width:100%" src="images/web_banner.png"> -->
+                            <img style="width:100%" src="images/web_banner2.png">
+                            <!-- <img style="width:100%" src="https://www.maraktechnologies.com/images/webdev2.png"> -->
+                            <!-- <img style="width:100%" src="https://www.al-fahad.biz/wp-content/uploads/2020/11/website-development-2.png"> -->
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div id="about" data-tab-content class="layout_content"> about </div>
+                <div id="projects" data-tab-content class="layout_content"> projects </div>
+                <div id="contact" data-tab-content class="layout_content"> contact </div>
             </main>
         </div>
     </div>

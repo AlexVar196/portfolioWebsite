@@ -224,6 +224,20 @@
     max-width: 100%;
 }
 
+.skills_icon_container {
+    align-self: center;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    background: none;
+    opacity: 1;
+    position: relative;
+    max-width: 100%;
+    align-items: center;
+}
+
 .tabs_bar {
     display: flex;
     background: var(--tab-bg);
@@ -265,7 +279,7 @@
     color: var(--text-main);
     font-family: JetBrains Mono, monospace;
     flex: 1 1;
-    height: 85vh;
+    height: 96vh;
     overflow-y: auto;
 }
 
@@ -357,6 +371,7 @@
     line-height: 1.8rem;
     counter-reset: line;
     margin: 50px 0;
+    max-width: 700px;
 }
 
 .css_line::before {
@@ -394,9 +409,20 @@
     counter-reset: line;
     margin: 50px 0;
     text-align: center;
+    max-width: 750px;
+    min-width: 650px;
+    margin-right: 6rem;
 }
 
-.about_wrapper h2{
+.skills_card {
+    margin-bottom: 3rem;
+}
+
+.skills_card h3 {
+    text-decoration: underline;
+}
+
+.about_wrapper h2 {
     text-align: center;
     margin-bottom: 3rem;
 }
@@ -406,9 +432,37 @@
     justify-content: space-between;
 }
 
+.technical_list {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 7rem;
+}
+
+.technical_list_item {
+    display: flex;
+    flex-direction: column;
+}
+
 /* media */
 
+@media only screen and (max-width: 1800px) {
+    .skills_block {
+        margin-right: 0px;
+
+    }
+}
+
 @media only screen and (max-width: 1600px) {
+    .technical_list {
+        flex-wrap: wrap;
+        padding: 1.5rem 3rem;
+    }
+
+    .skills_block {
+        max-width: 450px;
+        min-width: 450px;
+    }
+
     .gif_container {
         width: 42.5%;
         margin-top: 6rem;
@@ -422,7 +476,47 @@
 }
 
 
+@media only screen and (max-width: 1400px) {
+
+    .skills_block {
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    .technical_list_item {
+        margin-bottom: 1rem;
+    }
+
+    .gif_container {
+        display: none;
+
+    }
+
+    .home_title_container {
+        padding-top: 2rem;
+        padding-left: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 1300px) {
+    .about_wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills_block {
+        max-width: 750px;
+        min-width: 650px;
+    }
+}
+
 @media only screen and (max-width: 930px) {
+
+    .skills_block {
+        min-width: 400px;
+        max-width: 400px;
+    }
 
     .window_menu {
         display: none;
@@ -451,19 +545,6 @@
 }
 
 
-@media only screen and (max-width: 1400px) {
-    .gif_container {
-        display: none;
-
-    }
-
-    .home_title_container {
-        padding-top: 2rem;
-        padding-left: 1rem;
-    }
-
-}
-
 @media only screen and (max-width: 740px) {
 
     .explorer_bar {
@@ -472,6 +553,22 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .css_line::before {
+        display: none;
+    }
+
+    .layout_content_container {
+        padding: 0.5rem;
+    }
+
+    .css_info_block p {
+        font-size: 0.85rem;
+    }
+
+    .skills_card {
+        margin-bottom: 0rem;
+    }
+
     .tabs_bar {
         display: grid;
         grid-template-columns: 50% 50%;

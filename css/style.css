@@ -411,7 +411,6 @@
     text-align: center;
     max-width: 750px;
     min-width: 650px;
-    margin-right: 6rem;
 }
 
 .skills_card {
@@ -429,7 +428,6 @@
 
 .about_wrapper {
     display: flex;
-    justify-content: space-between;
 }
 
 .technical_list {

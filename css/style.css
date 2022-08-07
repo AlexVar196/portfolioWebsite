@@ -8,6 +8,7 @@
     /* border: 1px solid greenyellow; */
 }
 
+
 :root {
     --nav-bar-border: #161819;
     --tab-border: #24292e;
@@ -25,6 +26,11 @@
     --tab-bg-hover: #24292e;
     --tab-hover-border: #ffdc00;
     --tab-hover-button: #ffdd00b9;
+    --code-text-yellow: #fcea74;
+    --code-text-blue: #5ac1ff;
+    --code-text-red: #c98f66;
+    --line-number: #808080;
+    --code-text-punc: #efefef;
 }
 
 .window_nav_bar {
@@ -343,6 +349,61 @@
     line-height: 1.7rem;
     max-width: 800px;
     min-width: 630px;
+}
+
+.css_info_block {
+    flex: 1 1;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    counter-reset: line;
+    margin: 50px 0;
+}
+
+.css_line::before {
+    content: counter(line);
+    counter-increment: line;
+    margin-right: 1rem;
+    color: var(--line-number);
+}
+
+.class_name {
+    color: var(--code-text-yellow)
+}
+
+.punct {
+    color: var(--code-text-punc)
+}
+
+.property {
+    color: var(--code-text-blue)
+}
+
+.value {
+    color: var(--code-text-red)
+}
+
+.css_line a {
+    text-decoration: none;
+    color: var(--code-text-red);
+}
+
+.skills_block {
+    flex: 1 1;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    counter-reset: line;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.about_wrapper h2{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.about_wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* media */

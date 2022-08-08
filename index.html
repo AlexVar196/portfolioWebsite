@@ -168,13 +168,15 @@
 
             </div>
             <main class="layout_content_container">
-                <div id="home" data-tab-content class="layout_content active">
+                <div id="home" data-tab-content class="layout_content">
+                    <!-- <div id="home" data-tab-content class="layout_content active"> -->
                     <div class="layout_content_wrapper">
                         <div class="home_title_container">
                             <h1 class="homepage_name_title"><span>Alex</span>ander <span>Var</span>shavsky</h1>
                             <h1 class="homepage_job_title">Front-End Developer</h1>
                             <button class="home_button" data-tab-target="#projects">Projects</button>
-                            <button class="home_button" data-tab-target="#contact">Contact</button>
+                            <button class="home_button" type="submit"
+                                onclick="window.open('files/Alexander_Varshavsky_Resume 2022.pdf')">Resume</button>
                             <div class="home_about">
                                 <p> I’m <span class="highlight">Alex</span>, a 32-year-old <span class="highlight">web
                                         and mobile</span> developer that gets excited by the
@@ -200,7 +202,8 @@
                     <div class="about_wrapper">
                         <div class="css_info_block">
                             <!-- PERSONAL INFO -->
-                            <h2>Personal Information</h1>
+                            <h2>Personal Information</h2>
+                            <div id="shift_left">
                                 <p class="css_line">&nbsp;<span class="class_name">.personal_info </span>{</p>
                                 <p class="css_line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">name </span>: <span
                                         class="value">Alexander Varshavsky</span>;</p>
@@ -213,49 +216,54 @@
                                     <span class="value">Front-End Developer</span>;
                                 </p>
                                 <p class="css_line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">email </span>: <span
-                                        class="value">alexvar196@gmail.com</span>;</p>
+                                        class="value"><a href="#"
+                                            onclick="CopyToClipboard('alexvar196@gmail.com');return false;">alexvar196@gmail.com</a></span>;
+                                    <span class="alert_message" id="alert">Copied!</span>
+                                </p>
                                 <p class="css_line">&nbsp;}</p>
                                 <p class="css_line"></p>
 
 
                                 <!-- SOCIALS -->
                                 <p class="css_line">&nbsp;<span class="class_name">.socials </span>{</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">linkedin </span>: <span
-                                        class="value"><a href="https://www.linkedin.com/in/alexandervarshavsky/"
-                                            target="_blank" rel="noopener">alexandervarshavsky</a></span>;</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">github </span>: <span
-                                        class="value"><a href="https://github.com/AlexVar196" target="_blank"
-                                            rel="noopener">AlexVar196</a></span>;</p>
-                                <p class="css_line">}</p>
-                                <p class="css_line"></p>
+                            </div>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">linkedin </span>: <span
+                                    class="value"><a href="https://www.linkedin.com/in/alexandervarshavsky/"
+                                        target="_blank" rel="noopener">alexandervarshavsky</a></span>;</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">github </span>: <span
+                                    class="value"><a href="https://github.com/AlexVar196" target="_blank"
+                                        rel="noopener">AlexVar196</a></span>;</p>
+                            <p class="css_line">}</p>
+                            <p class="css_line"></p>
 
 
-                                <!-- EDUCATION -->
-                                <p class="css_line"><span class="class_name">.education </span>{</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">degree </span>: <span
-                                        class="value">B.S in Computer Science</span>;</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">university </span>: <span
-                                        class="value">Rutgers University</span>;</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">graduated_date </span>:
-                                    <span class="value">January 2021</span>;
-                                </p>
-                                <p class="css_line">}</p>
-                                <p class="css_line"></p>
+                            <!-- EDUCATION -->
+                            <p class="css_line"><span class="class_name">.education </span>{</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">degree </span>: <span
+                                    class="value">B.S in Computer Science</span>;</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">university </span>: <span
+                                    class="value"><a href="https://www.rutgers.edu/new-brunswick" target="_blank"
+                                        rel="noopener">Rutgers University</a></span>;</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">graduated_date </span>:
+                                <span class="value">January 2021</span>;
+                            </p>
+                            <p class="css_line">}</p>
+                            <p class="css_line"></p>
 
-                                <!-- EXTRA INVO -->
-                                <p class="css_line"><span class="class_name">.extra_information </span>{</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">military </span>: <span
-                                        class="value">3 years - Instructior - Air Force</span>;</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">languages </span>: <span
-                                        class="value">English, Hebrew, Russian</span>;</p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">lived_in </span>:
-                                    <span class="value">Georgia, Russia, Israel, USA</span>;
-                                </p>
-                                <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">hobbies </span>:
-                                    <span class="value">cooking, guitar, dogs, blockchain</span>;
-                                </p>
-                                <p class="css_line">}</p>
-                                <p class="css_line"></p>
+                            <!-- EXTRA INVO -->
+                            <p class="css_line"><span class="class_name">.extra_information </span>{</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">military </span>: <span
+                                    class="value">Instructor-Air Force</span>;</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">languages </span>: <span
+                                    class="value">English, Hebrew, Russian</span>;</p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">lived_in </span>:
+                                <span class="value">Russia, Israel, USA</span>;
+                            </p>
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;<span class="property">hobbies </span>:
+                                <span class="value">cooking, guitar, dogs, blockchain</span>;
+                            </p>
+                            <p class="css_line">}</p>
+                            <p class="css_line"></p>
                         </div>
                         <div class="skills_block">
                             <h2>Technical Skills</h2>
@@ -342,7 +350,89 @@
                         </div>
                     </div>
                 </div>
-                <div id="projects" data-tab-content class="layout_content"> projects </div>
+
+
+                <div id="projects" data-tab-content class="layout_content active">
+                    <div class=projects_wrapper>
+                        <div class="projects_banner">
+                            <h2 style="margin-bottom:1.2rem;"> Projects</h2>
+                            <p> Here you can find my latest projects. They all include a link that takes you to the
+                                website as well as the gitHub repository link.</p>
+                            <p>
+                                <span class="property"> project had two purposes: </span> </br>
+                                <span class="value">1. Learn a skill</br>
+                                    2. Build something that I would use myself.</span></br>
+                            </p>
+                            <p>You can also browse my <span class="here_link"><a href="https://github.com/AlexVar196"
+                                        target="_blank" rel="noopener">
+                                        gitHub</a></span> and check out older projects.
+                            </p>
+                        </div>
+
+
+                        <div class="project_cards_container">
+                            <div class="project_card">
+                                <div class="project_image_container">
+                                    <span> <img src="images/website.png"></span>
+                                </div>
+                                <div class="project_card_content">
+                                    <h3> Project Title 1</h3>
+                                    <p> Project description Project descriptionProject descriptionProject
+                                        descriptionProject descriptionProject descriptionProject descriptionProject
+                                        descriptionProject descriptionProject description</p>
+
+                                    <div class="stack_list">
+                                        <span class="javascript"> javascript </span>
+                                        <span class="html"> HTML5 </span>
+                                        <span class="css"> CSS3 </span>
+                                    </div>
+                                    <hr>
+                                    <div class="links_list">
+                                        <span class="links_icon_container">
+                                            <a href="https://github.com/AlexVar196" target="_blank" rel="noopener"><img
+                                                    class="icon_image" alt="github_icon"
+                                                    src="images/github_icon.svg"></a>
+                                        </span>
+                                        <span class="links_icon_container">
+                                            <a href="https://github.com/AlexVar196" target="_blank" rel="noopener"><img
+                                                    class="icon_image" alt="css icon" src="images/link_icon.svg"></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project_card flipped_card">
+                                <div class="project_image_container">
+                                    <span> <img src="images/website.png"></span>
+                                </div>
+                                <div class="project_card_content">
+                                    <h3> Project Title 1</h3>
+                                    <p> Project description Project descriptionProject descriptionProject
+                                        descriptionProject descriptionProject descriptionProject descriptionProject
+                                        descriptionProject descriptionProject description</p>
+
+                                    <div class="stack_list">
+                                        <span class="javascript"> javascript </span>
+                                        <span class="html"> HTML5 </span>
+                                        <span class="css"> CSS3 </span>
+                                    </div>
+                                    <hr>
+                                    <div class="links_list">
+                                        <span class="links_icon_container">
+                                            <a href="https://github.com/AlexVar196" target="_blank" rel="noopener"><img
+                                                    class="icon_image" alt="github_icon"
+                                                    src="images/github_icon.svg"></a>
+                                        </span>
+                                        <span class="links_icon_container">
+                                            <a href="https://github.com/AlexVar196" target="_blank" rel="noopener"><img
+                                                    class="icon_image" alt="css icon" src="images/link_icon.svg"></a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div id="contact" data-tab-content class="layout_content"> contact </div>
             </main>
         </div>

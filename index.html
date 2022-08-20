@@ -217,8 +217,8 @@
                                 </p>
                                 <p class="css_line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="property">email </span>: <span
                                         class="value"><a href="#"
-                                            onclick="CopyToClipboard('alexvar196@gmail.com');return false;">alexvar196@gmail.com</a></span>;
-                                    <span class="alert_message" id="alert">Copied!</span>
+                                            onclick="CopyToClipboard('developer@alexvar.dev', 'alert1');return false;">developer@alexvar.dev</a></span>;
+                                    <span class="alert_message" id="alert1">Copied!</span>
                                 </p>
                                 <p class="css_line">&nbsp;}</p>
                                 <p class="css_line"></p>
@@ -356,7 +356,8 @@
                     <div class=projects_wrapper>
                         <div class="projects_banner">
                             <h2 style="margin-bottom:1.2rem;"> Projects</h2>
-                            <p> Here you can find my latest projects. They all include a link that takes you to the
+                            <p> Here you can find my latest projects. </br>
+                                They all include a link that takes you to the
                                 website as well as the gitHub repository link.</p>
                             <p>
                                 <span class="property"> project had two purposes: </span> </br>
@@ -433,7 +434,47 @@
                     </div>
                 </div>
 
-                <div id="contact" data-tab-content class="layout_content"> contact </div>
+                <div id="contact" data-tab-content class="layout_content">
+
+                    <div class=projects_wrapper>
+                        <div class="projects_banner">
+                            <h2 style="margin-bottom:1.2rem;"> Contact Information</h2>
+                            <p> I would love to connect so just send me an email.</p>
+                            <p>Clicking on the email address will copy it to clipboard for your convenience.</p>
+
+
+                            <p class="css_line">&nbsp;&nbsp;&nbsp;&nbsp;const <span class="property">email </span>=
+                                <span class="value"><a href="#"
+                                        onclick="CopyToClipboard('developer@alexvar.dev', 'alert2');return false;">"developer@alexvar.dev"</a></span>;
+                                <span class="alert_message" id="alert2">Copied!</span>
+                            </p>
+                            </br>
+                            </br>
+                            <!-- <p>The form below will do exactly the same! I will get it directly to my email.</p> -->
+                            <p>Talk soon!</p>
+                        </div>
+                        <div class="form_wrapper">
+                            <iframe name="myframe" id="frame1" src="emailViaG.php" style="display:none"></iframe>
+                            <form id="contactForm" action="emailViaG.php" method="post" target="myframe"
+                                enctype="multipart/form-data">
+                                <div class="form_group">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" required>
+                                </div>
+                                <div class="form_group">
+                                    <label for="email">Email</label>
+                                    <input type="text" name="email" id="email" required>
+                                </div>
+                                <div class="form_group">
+                                    <label for="message">Message</label>
+                                    <input type="text" name="message" id="message" required>
+                                </div>
+                                <button type="submit" name="submit">Send</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
             </main>
         </div>
     </div>

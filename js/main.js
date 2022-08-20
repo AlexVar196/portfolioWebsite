@@ -21,14 +21,13 @@ tabs.forEach(tab => {
 })
 
 
-function CopyToClipboard(text) {
-    console.log('i was clicked and got ' + text)
+function CopyToClipboard(text, id) {
 
     /* Copy the text inside the text field */
     navigator.clipboard.writeText(text);
-    const alert = document.getElementById('alert').style.display = "inline";
-    setTimeout(function () {
-        document.getElementById('alert').style.display = "none";
-    }, 2000);
+    const alert = document.getElementById(id).style.display = "inline";
 
+    setTimeout(function () {
+        document.getElementById(id).style.display = "none";
+    }, 2000);
 }

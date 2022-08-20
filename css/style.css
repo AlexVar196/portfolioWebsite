@@ -468,8 +468,8 @@ h3 {
 
 .projects_banner {
     margin-top: 50px;
-    padding-left: 5rem;
-    max-width: 70%;
+    /* padding-left: 5rem;
+    max-width: 70%; */
 }
 
 .projects_banner p {

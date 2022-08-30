@@ -35,21 +35,23 @@ function validateForm() {
     let email = document.forms["contactForm"]["email"];
     let message = document.forms["contactForm"]["message"];
 
-    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var validRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
     if (name.value == null || email.value == null || message.value == null) {
         alert("Please fill out all fields");
         return false;
     } else if (email.value.match(validRegex)) {
-        name.value = "";
-        email.value = "";
-        message.value = "";
         showPopup();
+        setTimeout(function () {
+            clearFields(name, email, message);
+        }, 4000);
+        return true;
     } else {
         const alert = document.getElementById("alert3").style.display = "inline";
         setTimeout(function () {
             document.getElementById("alert3").style.display = "none";
         }, 3000);
+        return false;
     }
 }
 
@@ -62,5 +64,11 @@ function showPopup() {
     setTimeout(function () {
         popup.style.display = "none";
         button.style.display = "flex";
-    }, 2000);
+    }, 4000);
+}
+
+function clearFields(name, email, message) {
+    name.value = "";
+    email.value = "";
+    message.value = "";
 }

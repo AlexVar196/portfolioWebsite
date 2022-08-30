@@ -33,6 +33,34 @@
     --code-text-punc: #efefef;
 }
 
+.html {
+    border: 0.1rem solid #c6350d;
+}
+
+.css {
+    border: 0.1rem solid #3246fa;
+}
+
+.javascript {
+    border: 0.1rem solid #ede907;
+}
+
+.react {
+    border: 0.1rem solid #029aff;
+}
+
+.node {
+    border: 0.1rem solid #22a151;
+}
+
+.solidity {
+    border: 0.1rem solid #71d69b;
+}
+
+.ethereum {
+    border: 0.1rem solid #3848ad;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 500;
@@ -46,6 +74,15 @@ h2 {
 h3 {
     font-size: 1.2em;
     line-height: 1.8rem;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
 }
 
 .window-nav-bar {
@@ -500,6 +537,7 @@ h3 {
     display: flex;
     flex-direction: column;
     box-shadow: 14px 14px 15px var(--explorer-border);
+    background-color: var(--bg-menu);
 }
 
 .project-image-container img {
@@ -519,7 +557,7 @@ h3 {
     font-size: 1.2rem;
     padding: 2rem;
     width: 100%;
-    background-color: var(--bg-menu);
+
 
 }
 
@@ -550,25 +588,6 @@ h3 {
     font-size: 1rem;
 }
 
-.html {
-    border: 0.1rem solid #c6350d;
-}
-
-.css {
-    border: 0.1rem solid #3246fa;
-}
-
-.javascript {
-    border: 0.1rem solid #ede907;
-}
-
-.react {
-    border: 0.1rem solid #029aff;
-}
-
-.node {
-    border: 0.1rem solid #22a151;
-}
 
 .links-icon-container {
     box-sizing: border-box;

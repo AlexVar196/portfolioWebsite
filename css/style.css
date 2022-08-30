@@ -562,6 +562,14 @@ h3 {
     border: 0.1rem solid #ede907;
 }
 
+.react {
+    border: 0.1rem solid #029aff;
+}
+
+.node {
+    border: 0.1rem solid #22a151;
+}
+
 .links-icon-container {
     box-sizing: border-box;
     display: inline-block;
@@ -617,11 +625,24 @@ textarea {
     box-shadow: 14px 14px var(--explorer-border);
 }
 
-.button-container-center {
+#button-container-center {
     display: flex;
     justify-content: center;
     padding: 1em;
     padding-bottom: 0.2em;
+}
+
+#email-popup-container {
+    display: none;
+    justify-content: center;
+    padding: 1em;
+    padding-bottom: 0.2em;
+}
+
+.popup {
+    width: 45%;
+    border: 2px solid rgb(11, 169, 32);
+    text-align: center;
 }
 
 /* media */
@@ -739,6 +760,11 @@ textarea {
 }
 
 @media only screen and (max-width: 650px) {
+
+    .about-wrapper .css-info-block {
+        margin-left: 0;
+    }
+
     .css-line::before {
         display: none;
     }

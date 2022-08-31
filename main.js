@@ -20,7 +20,6 @@ tabs.forEach(tab => {
 })
 
 function CopyToClipboard(text, id) {
-    /* Copy the text inside the text field */
     navigator.clipboard.writeText(text);
     const alert = document.getElementById(id).style.display = "inline";
 
@@ -48,8 +47,10 @@ function validateForm() {
         return true;
     } else {
         const alert = document.getElementById("alert3").style.display = "inline";
+        const border = document.getElementById("email").style.border = "1px solid #bc0000";
         setTimeout(function () {
             document.getElementById("alert3").style.display = "none";
+            document.getElementById("email").style.border = "none";
         }, 3000);
         return false;
     }

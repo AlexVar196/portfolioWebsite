@@ -5,25 +5,26 @@
     list-style: none;
     text-decoration: none;
     scroll-behavior: smooth;
-    /* border: 1px solid greenyellow; */
 }
-
 
 :root {
     --nav-bar-border: #161819;
     --tab-border: #24292e;
     --bg-menu: #1f2425;
     --tabs-bar: #1f2425;
-    --text-menu: #fff;
-    --text-main: #efefef;
-    --text-darker: #efefefbc;
+    --nav-white: #fff;
+    --text-main: #ffffffbf;
+    --title-main: #ffffffed;
+    --title-text-darker: #efefefbc;
     --sidebar-active: #efefef;
     --sidebar-inactive: rgb(106, 115, 125);
-    --bg-main: #24292e;
+    --bg-main: #1c2024;
     --explorer-bg: #1f2428;
     --explorer-border: #161a1d;
     --tab-bg: #1f2428;
-    --tab-bg-hover: #24292e;
+    --tab-bg: #1f2428;
+    --tab-bg-hover: #1c2024;
+    --explorer-tab-bg-hover: #24292e;
     --tab-hover-border: #ffdc00;
     --tab-hover-button: #e8cf2acf;
     --code-text-yellow: #fcea74;
@@ -31,6 +32,7 @@
     --code-text-red: #c98f66;
     --line-number: #808080;
     --code-text-punc: #efefef;
+    --alert-color: #e00101;
 }
 
 .html {
@@ -61,6 +63,10 @@
     border: 0.1rem solid #3848ad;
 }
 
+.sass {
+    border: 0.1rem solid #c256bb;
+}
+
 h1 {
     font-size: 3rem;
     font-weight: 500;
@@ -69,11 +75,17 @@ h1 {
 h2 {
     margin-bottom: 3rem;
     font-size: 2rem;
+    color: var(--title-main);
 }
 
 h3 {
     font-size: 1.2em;
     line-height: 1.8rem;
+    color: var(--title-main);
+}
+
+h5 {
+    color: var(--title-main);
 }
 
 .hide {
@@ -92,7 +104,7 @@ a.disabled {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-menu);
+    color: var(--nav-white);
     font-size: 0.80rem;
     border-bottom: 1px solid var(--nav-bar-border);
     font-family: Source Sans Pro, sans-serif;
@@ -215,14 +227,14 @@ a.disabled {
     font-size: .9rem;
     letter-spacing: 1px;
     margin-bottom: 0.75rem;
-    color: var(--text-darker);
+    color: var(--title-text-darker);
 }
 
 .explorer-bar {
     background: var(--explorer-bg);
     width: 18vw;
     max-width: 235px;
-    color: var(--text-main);
+    color: var(--nav-white);
     font-family: Source Sans Pro, sans-serif;
     border-right: 1px solid var(--explorer-border);
 }
@@ -256,7 +268,7 @@ a.disabled {
 }
 
 .explorer-list-item:hover {
-    background: var(--tab-bg-hover);
+    background: var(--explorer-tab-bg-hover);
 }
 
 .explorer-list-item p {
@@ -300,7 +312,7 @@ a.disabled {
 .tab-item {
     padding: 0.5rem 1.25rem;
     background: var(--tab-bg);
-    color: var(--text-menu);
+    color: var(--nav-white);
     display: flex;
     align-items: center;
     font-family: Source Sans Pro, sans-serif;
@@ -319,7 +331,7 @@ a.disabled {
 }
 
 .explorer-list-item.active {
-    background: var(--tab-bg-hover);
+    background: var(--explorer-tab-bg-hover);
 }
 
 .tab-item p {
@@ -368,12 +380,14 @@ a.disabled {
 }
 
 .homepage-name-title {
+    color: var(--title-main);
     font-size: 5rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
 
 .homepage-job-title {
+    color: var(--title-main);
     font-size: 3rem;
     font-weight: 500;
     margin-bottom: 0.5rem;
@@ -382,7 +396,6 @@ a.disabled {
 
 .home-title-container {
     padding-top: 5rem;
-    /* padding-left: 3rem; */
 }
 
 .layout-content-wrapper {
@@ -404,7 +417,6 @@ a.disabled {
 .home-button:hover {
     background-color: var(--tab-hover-button);
     border: 2px solid transparent;
-    /* color: var(--sidebar-active); */
     color: black;
     box-shadow: 14px 14px var(--explorer-border);
 }
@@ -499,15 +511,13 @@ a.disabled {
 }
 
 .alert-message {
-    color: red;
+    color: var(--alert-color);
     font-size: 1rem;
     display: none;
 }
 
 .projects-banner {
     margin-top: 50px;
-    /* padding-left: 5rem;
-    max-width: 70%; */
 }
 
 .projects-banner p {
@@ -626,7 +636,7 @@ textarea {
 }
 
 #form-button {
-    width: 45%;
+    padding: 0 3rem;
     font-size: 1.2rem;
     line-height: 1.8rem;
     font-family: JetBrains Mono, monospace;
@@ -659,7 +669,7 @@ textarea {
 }
 
 .popup {
-    width: 45%;
+    padding: 0 2.7rem;
     border: 2px solid rgb(11, 169, 32);
     text-align: center;
 }
@@ -843,8 +853,12 @@ textarea {
     }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 530px) {
     .technical-list {
         padding: 1.5rem 3.3rem;
+    }
+
+    .css-info-block {
+        font-size: 0.95rem;
     }
 }

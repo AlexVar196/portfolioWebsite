@@ -97,6 +97,10 @@ a.disabled {
     cursor: default;
 }
 
+textarea {
+    resize: none;
+}
+
 .window-nav-bar {
     background: var(--bg-menu);
     height: 33px;

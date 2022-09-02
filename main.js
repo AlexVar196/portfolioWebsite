@@ -15,7 +15,7 @@ tabs.forEach(tab => {
             }
 
         })
-        target.classList.add('active')
+        target.classList.add('active');
     })
 })
 
